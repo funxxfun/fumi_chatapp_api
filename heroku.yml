@@ -25,4 +25,3 @@ build:
 run:
   # Bundlerでインストールされたgemを使用してコマンドを実行
   web: bundle exec puma -C config/puma.rb
-  

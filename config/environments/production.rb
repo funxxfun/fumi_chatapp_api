@@ -36,8 +36,12 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "wss://test-chatapp-api.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://test-chatapp-api.herokuapp.com', 'http://test-chatapp-api.herokuapp.com']
+
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  # config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -51,7 +55,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "live_chat_rails_production"
+  # config.active_job.queue_name_prefix = "app_production"
 
   config.action_mailer.perform_caching = false
 
@@ -102,10 +106,4 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-
-  # ActionCableを本番環境で使用
-  ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://live-chat-rails-f.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://live-chat-rails-f.herokuapp.com', 'http://live-chat-rails-f.herokuapp.com']
-
 end
