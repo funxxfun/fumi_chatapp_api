@@ -37,8 +37,8 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   ActionCable.server.config.disable_request_forgery_protection = true
-  config.action_cable.url = "wss://test-chatapp-api.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://test-chatapp-api.herokuapp.com', 'http://test-chatapp-api.herokuapp.com']
+  config.action_cable.url = "wss://fumi-chatapp-api.herokuapp.com//cable"
+  config.action_cable.allowed_request_origins = ['https://fumi-chatapp-api.herokuapp.com/', 'http://fumi-chatapp-api.herokuapp.com/']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
